@@ -7,7 +7,7 @@ FROM python:3.6-slim
 ARG BUILD_DATE
 ARG BUILD_VERSION
 ARG LICENSE="Apache-2.0"
-ARG FGBIO_POSTPROCESSING_VERSION=0.1.7
+ARG FGBIO_POSTPROCESSING_VERSION=0.1.8
 ARG VCS_REF
 ################## METADATA ########################
 LABEL org.opencontainers.image.vendor="MSKCC"
@@ -28,4 +28,4 @@ LABEL org.opencontainers.image.description="This container uses python3.6 as the
 
 RUN apt-get update \
   && apt-get install gcc g++ zlib1g-dev -y \
-  && pip install fgbio_postprocessing==0.1.7
+  && pip install fgbio_postprocessing==0.1.8
